@@ -1,3 +1,6 @@
+/**
+ * This is just a container to move packet information around easier
+ */
 package ip_router;
 
 public class Packet {
@@ -11,6 +14,11 @@ public class Packet {
         this.network = network;
         this.subnet = subnet;
         this.interfaceName = interfaceName;
+    }
+
+    @Override
+    public String toString() {
+        return "Packet Sent:{" + "ipaddress=" + ipaddress + ", network=" + network + ", subnet=" + subnet + ", interfaceName=" + interfaceName + '}';
     }
 
     public long getIpaddress() {

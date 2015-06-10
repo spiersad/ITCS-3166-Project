@@ -1,3 +1,7 @@
+/**
+ * This class is where the IP addresses and routes are stored
+ * it also has the function of routing the packets
+ */
 package ip_router;
 
 import java.util.ArrayList;
@@ -19,6 +23,22 @@ public class Router {
     
     public void addIpAddress(long address){
         this.ipAddresses.push(address);
+    }
+
+    public Stack<Long> getIpAddresses() {
+        return ipAddresses;
+    }
+
+    public ArrayList<Long> getNetIP() {
+        return netIP;
+    }
+
+    public ArrayList<Long> getNetSub() {
+        return netSub;
+    }
+
+    public ArrayList<String> getNetNames() {
+        return netNames;
     }
     
     public Packet routeIP(){
